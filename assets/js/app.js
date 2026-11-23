@@ -1,5 +1,4 @@
 (() => {
-  // Existing interaction: mobile navigation
   const menu = document.querySelector('.menu');
   const nav = document.querySelector('nav');
   if (menu && nav) {
@@ -7,43 +6,30 @@
       const isOpen = nav.classList.toggle('open');
       menu.setAttribute('aria-expanded', String(isOpen));
     });
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        menu.setAttribute('aria-expanded', 'false');
-      });
-    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+    }));
   }
+  document.querySelector('[data-open-all]')?.addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
+  document.querySelector('[data-close-all]')?.addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
 
-  // Existing interaction: questionnaire accordion controls
-  document.querySelector('[data-open-all]')?.addEventListener('click', () => {
-    document.querySelectorAll('details').forEach(detail => { detail.open = true; });
-  });
-  document.querySelector('[data-close-all]')?.addEventListener('click', () => {
-    document.querySelectorAll('details').forEach(detail => { detail.open = false; });
-  });
-
-  // Version 4.3 visual identity: KI -> LFP in the blue/petrol circle
-  document.querySelectorAll('.mark').forEach(mark => {
-    if (mark.textContent.trim() === 'KI') mark.textContent = 'LFP';
+  // Unify the site identity/header on every page, including fragebogen.html.
+  document.querySelectorAll('.brand').forEach(brand => {
+    brand.innerHTML = '<span class="mark">LFP</span><span>GICON KI-Befragung<small>Ergebniswebsite · Version 4.3</small></span>';
   });
 
-  // Version 4.3: make both hero calls-to-action use the preferred filled style.
+  // Same primary style for both hero actions on the start page.
   document.querySelectorAll('.hero .actions .btn').forEach(button => {
     button.classList.add('primary');
     button.classList.remove('alt');
   });
 
-  // Keep version labeling consistent on every page without changing page content.
+  // Consistent visible version label and document title.
   const versionPattern = /Version\s+4(?:\.1|\.2|\.3)?/gi;
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-  const textNodes = [];
-  while (walker.nextNode()) textNodes.push(walker.currentNode);
-  textNodes.forEach(node => {
-    if (versionPattern.test(node.nodeValue)) {
-      node.nodeValue = node.nodeValue.replace(versionPattern, 'Version 4.3');
-    }
-    versionPattern.lastIndex = 0;
-  });
-  document.title = document.title.replace(/Version\s+4(?:\.1|\.2|\.3)?/gi, 'Version 4.3');
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => { node.nodeValue = node.nodeValue.replace(versionPattern, 'Version 4.3'); });
+  document.title = document.title.replace(versionPattern, 'Version 4.3');
 })();
