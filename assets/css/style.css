@@ -2,3 +2,24 @@
 /* V4.1: übersichtlichere Antwortmöglichkeiten im Fragebogen */
 .choice-list{display:grid;gap:.45rem}.choice{display:flex;gap:.7rem;align-items:flex-start;padding:.7rem .8rem;background:#fff;border:1px solid var(--line);border-radius:.5rem}.choice-list.multi .choice{background:var(--wash)}.symbol{font-size:1.2rem;line-height:1;color:var(--petrol);font-weight:900}.multi .symbol{color:var(--blue)}.hint{background:var(--wash);padding:.7rem .8rem;border-left:4px solid var(--blue);border-radius:.3rem}.hint.wine{border-color:var(--wine);background:#f3e8eb}.qbody>.scale{margin:1rem 0 1.2rem;padding:1rem;background:var(--wash);border-radius:.7rem;border-left:5px solid var(--petrol);color:var(--ink)}.qbody>.scale.benefit{border-color:var(--blue)}.scale-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:.4rem;margin-top:.65rem}.scale-grid div{background:#fff;border:1px solid var(--line);border-radius:.45rem;padding:.55rem;text-align:center;min-width:0}.scale-grid strong{display:block;color:var(--petrol);font-size:1.05rem}.benefit .scale-grid strong{color:var(--blue)}.scale-grid span{display:block;font-size:.72rem;color:#626c70}.item-list{counter-reset:item;list-style:none!important;padding:0!important;display:grid;gap:.5rem}.item-list li{counter-increment:item;background:#fff;border:1px solid var(--line);border-radius:.5rem;padding:.75rem .8rem .75rem 3rem;position:relative}.item-list li:before{content:counter(item,decimal-leading-zero);position:absolute;left:.8rem;top:.72rem;font-weight:900;color:var(--petrol)}.open-answer{padding:1rem;border:1px dashed var(--wine);color:var(--wine);background:#f7edef;border-radius:.5rem;font-weight:700}
 @media(max-width:800px){.menu{display:block}nav{display:none;position:absolute;left:1rem;right:1rem;top:66px;background:#fff;padding:.6rem;box-shadow:var(--shadow);border-radius:.6rem;flex-direction:column}nav.open{display:flex}.facts{grid-template-columns:repeat(2,1fr)}.cards.three,.cards.two,.stats-grid,.profiles{grid-template-columns:1fr}.tam{grid-template-columns:1fr}.node.accent,.node.strong,.arrow{grid-column:1}.plus{display:none}.process li,.meta-list>div{grid-template-columns:1fr}.chapter{grid-template-columns:36px 1fr}.steps{top:70px}.foot{display:block}.scale-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.wrap{width:min(100% - 1.2rem,1160px)}.facts{grid-template-columns:1fr}.hero{padding:3.3rem 0}.hero h1{font-size:2.45rem}.question{grid-template-columns:34px 1fr}.bar-head{font-size:.9rem}.brand small{display:none}}
+
+/* Version 5.1: questionnaire interaction and context pages only */
+.question-toggle{border:1px solid var(--line);border-radius:.55rem;margin:.5rem 0;background:var(--paper)}
+.question-toggle>summary{cursor:pointer;padding:.68rem .9rem;color:var(--petrol2);font-weight:750;overflow-wrap:anywhere}
+.question-toggle[open]>summary{background:var(--wash);border-radius:.5rem .5rem 0 0}
+.question-number{font-variant-numeric:tabular-nums;margin-right:.35rem}
+.question-toggle .question{display:block;padding:.85rem;min-width:0}
+.frequency .tablewrap{margin:0 0 1rem;max-width:100%}
+.frequency table{min-width:340px;font-size:.88rem}
+.frequency caption{text-align:left;font-weight:750;color:var(--petrol2);padding:.5rem 0}
+.frequency tbody tr:nth-child(even){background:var(--paper)}
+.frequency td{white-space:nowrap;font-variant-numeric:tabular-nums}
+.question-toggle summary:focus-visible,.frequency .tablewrap:focus-visible,.context-cta:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.context-actions .context-cta{display:inline-flex;gap:.55rem;align-items:center;background:var(--white);color:var(--petrol2);border:1px solid var(--white);min-height:44px}
+.context-actions .context-cta:hover{background:var(--wash);border-color:var(--wash)}
+.context-cards{margin:1.5rem 0 2rem}.context-cards h3,.context-cards p:last-child{margin-bottom:0}.context-cards h3{margin-top:0}
+.context-media{margin:1.25rem 0 1.75rem;background:var(--white);border:1px solid var(--line);border-radius:.75rem;overflow:hidden}
+.context-media img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;background:var(--wash)}
+.context-media figcaption{padding:.55rem .8rem;font-size:.84rem}
+.context-logo{width:min(100%,240px);margin-top:0}.context-logo img{padding:.5rem;max-height:110px;background:white}
+@media(max-width:480px){.question-toggle .question{padding:.55rem}.frequency .detail-body{padding:0 .55rem .7rem}.toolbar{flex-wrap:wrap}}
