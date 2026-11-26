@@ -16,7 +16,7 @@
 
   // Unify the site identity/header on every page, including fragebogen.html.
   document.querySelectorAll('.brand').forEach(brand => {
-    brand.innerHTML = '<span class="mark">LFP</span><span>GICON KI-Befragung<small>Ergebniswebsite · Version 4.3</small></span>';
+    brand.innerHTML = '<span class="mark">LFP</span><span>GICON KI-Befragung<small>Ergebniswebsite · Version 5.0</small></span>';
   });
 
   // Same primary style for both hero actions on the start page.
@@ -30,6 +30,6 @@
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(node => { node.nodeValue = node.nodeValue.replace(versionPattern, 'Version 4.3'); });
-  document.title = document.title.replace(versionPattern, 'Version 4.3');
+  nodes.forEach(node => { node.nodeValue = node.nodeValue.replace(versionPattern, 'Version 5.0'); });
+  document.title = document.title.replace(versionPattern, 'Version 5.0');
 })();
