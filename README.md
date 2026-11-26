@@ -1,3 +1,3 @@
-# Version 5.2
+# Version 4.1
 
-Korrigierte konservative Weiterentwicklung der Version 4.3. Bestehende sechs Seiten in voller Tiefe erhalten; ergänzt um GICON, DeutschlandGPT, Forschungsfrage und Häufigkeitsakkordeons.
+Neue übersichtliche Darstellung der Antwortmöglichkeiten auf fragebogen.html. Für ein bestehendes V4-Repository am sichersten nur `fragebogen.html`, `assets/css/style.css` und `assets/js/app.js` ersetzen.
