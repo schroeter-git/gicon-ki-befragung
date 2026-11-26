@@ -1,16 +1,5 @@
-# GICON KI-Befragung · Website-Version 5.0
+# GICON KI-Befragung · Website-Version 5.1
 
-Das ZIP entpacken und `index.html` im Browser öffnen. Die Ordnerstruktur beibehalten.
+ZIP vollständig entpacken und `index.html` öffnen. Die Ordnerstruktur beibehalten.
 
-## Änderungen gegenüber dem bereitgestellten Stand 4.3
-
-- Zwei neue Seiten: `gicon.html` und `deutschlandgpt.html`.
-- Zwei zusätzliche Links im Hauptmenü aller Seiten.
-- Versionskennzeichnung im bestehenden gemeinsamen Skript auf 5.0 gesetzt.
-- Vorhandene Seiteninhalte, CSS, robots.txt und .nojekyll unverändert übernommen.
-
-## Bisherige Projektnotiz
-
-# Version 4.1
-
-Neue übersichtliche Darstellung der Antwortmöglichkeiten auf fragebogen.html. Für ein bestehendes V4-Repository am sichersten nur `fragebogen.html`, `assets/css/style.css` und `assets/js/app.js` ersetzen.
+Die Fragebogenseite enthält drei Ebenen: Themenblock, Frage und Häufigkeiten. Grundlage der Tabellen ist der SPSS-Export vom 15.11.2026 mit 31 Fällen. Es sind keine Rohdaten oder Freitextantworten im Archiv enthalten. Bilder auf den beiden Kontextseiten werden bei bestehender Internetverbindung von den jeweiligen Anbietern geladen. Die Bildquellen stehen unter den Motiven.
